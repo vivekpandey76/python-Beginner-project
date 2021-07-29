@@ -12,5 +12,23 @@ def guess(x):
 
     print("You won")
 
+# guess(10)
 
-guess(10)
+def computer_guess(y):
+    low=1
+    high=y
+    feedback=''
+    while feedback !='c':
+        if low!=high:
+            guess=random.randint(low,high)
+        else:
+            guess=low
+        feedback=input(f'Is {guess} is correct (c) or low (l) or high (h)')
+        if feedback == 'l':
+            guess=low+1
+        elif feedback == "h":
+            guess=high-1
+
+    print("Yay congrats you won")
+
+computer_guess(10)
